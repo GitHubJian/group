@@ -1,0 +1,36 @@
+{
+    "name": "webpack-chunk-group",
+    "version": "1.0.0",
+    "description": "Webpack 优化打包概念",
+    "bin": {},
+    "main": "dist/index.js",
+    "scripts": {
+        "init": "rm -rf node_modules package-lock.json && npm install",
+        "start": "npm run build -- -w",
+        "build": "npm run clean && tsc -p src",
+        "clean": "rm -fr dist"
+    },
+    "typeScriptVersion": "4.1.2",
+    "types": "./dist/options.d.ts",
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "webpack",
+        "cache group"
+    ],
+    "author": "xiaowensheng",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "4.1.1",
+        "deepmerge": "4.2.2",
+        "string.prototype.padstart": "3.1.2"
+    },
+    "devDependencies": {
+        "@types/node": "15.3.0",
+        "typescript": "4.1.2"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    }
+}
